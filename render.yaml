@@ -1,0 +1,8 @@
+services:
+  - type: static
+    name: mern-movie-frontend
+    env: static
+    branch: main        # Nhánh deploy
+    buildCommand: npm install --prefix vite-react-ts-client && npm run build --prefix vite-react-ts-client
+    publishPath: vite-react-ts-client/dist
+    autoDeploy: true
